@@ -1,0 +1,37 @@
+{
+    "ReRoutes": [
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamPort": 80,
+        "DownstreamHost": "pedido",
+        "UpstreamPathTemplate": "/pedido/",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamPort": 80,
+        "DownstreamHost": "pedido",
+        "UpstreamPathTemplate": "/pedido/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamPort": 80,
+        "DownstreamHost": "catalogo",
+        "UpstreamPathTemplate": "/catalogo/",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamPort": 80,
+        "DownstreamHost": "catalogo",
+        "UpstreamPathTemplate": "/catalogo/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      }
+    ],
+    "GlobalConfiguration": {}
+  }
