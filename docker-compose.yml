@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  gateway:
+    image: gateway
+    build:
+      context: .
+      dockerfile: Gateway/Dockerfile
+
+  pedido:
+    image: pedido
+    build:
+      context: .
+      dockerfile: Pedido/Dockerfile
+
+
+  catalogo:
+    image: catalogo
+    build:
+      context: .
+      dockerfile: Catalogo/Dockerfile
